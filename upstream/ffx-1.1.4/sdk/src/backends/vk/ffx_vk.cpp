@@ -20,6 +20,7 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
+#include <mutex> // tlg: libc++ does not include it transitively
 #include <FidelityFX/host/ffx_interface.h>
 #include <FidelityFX/host/ffx_util.h>
 #include <FidelityFX/host/ffx_assert.h>
@@ -34,6 +35,9 @@
 #endif  // _WIN32
 
 #include <vulkan/vulkan.h>
+
+#include <cmath>  // tlg: log2 (libc++ does not include it transitively)
+#include <new>    // tlg: placement new (libc++ does not include it transitively)
 
 // prototypes for functions in the interface
 FfxVersionNumber       GetSDKVersionVK(FfxInterface* backendInterface);

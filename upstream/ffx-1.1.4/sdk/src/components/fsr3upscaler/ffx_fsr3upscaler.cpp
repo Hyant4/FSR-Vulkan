@@ -24,6 +24,7 @@
 #include <cmath>        // for fabs, abs, sinf, sqrt, etc.
 #include <string.h>     // for memset
 #include <cfloat>       // for FLT_EPSILON
+#include <cstdlib>      // tlg: _countof on MinGW/libc++
 #include <FidelityFX/host/ffx_fsr3upscaler.h>
 
 #define FFX_CPU

@@ -22,6 +22,7 @@
 
 #include <FidelityFX/host/ffx_message.h>
 #include <FidelityFX/host/ffx_util.h>
+#include <wchar.h>  // tlg: swprintf_s on MinGW (libc++ does not pull it in)
 
 #ifdef _WIN32
 #ifndef WIN32_LEAN_AND_MEAN
